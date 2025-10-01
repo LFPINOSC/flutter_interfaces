@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_interfaces/screens/CicloVidaApp.dart';
 import 'package:flutter_interfaces/screens/calculadora.dart';
 import 'package:flutter_interfaces/screens/relog.dart';
 import 'package:flutter_interfaces/screens/timer.dart';
@@ -31,6 +32,10 @@ class MunuPantalla extends StatelessWidget {
 
             Navigator.push(context, MaterialPageRoute(builder: (_) => const TimerScreen()));
           } ),
+          MenuItem(titulo: "Ciclo vida", icono: Icons.access_alarms_outlined, onTap: (){
+
+            Navigator.push(context, MaterialPageRoute(builder: (_) =>  CicloVidaApp()));
+          } )
           
           
         ],

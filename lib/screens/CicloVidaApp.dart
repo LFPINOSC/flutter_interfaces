@@ -18,6 +18,7 @@ class _CicloVidaAppState extends State<CicloVidaApp> with WidgetsBindingObserver
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+  @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     setState(() {
       switch (state) {
@@ -41,6 +42,12 @@ class _CicloVidaAppState extends State<CicloVidaApp> with WidgetsBindingObserver
           _colorFondo=Colors.grey;
           _icono= Icons.cancel;
           break;
+        case AppLifecycleState.hidden:
+          _estado="Aplicacion cerrada";
+          _colorFondo=Colors.red;
+          _icono= Icons.cancel;
+          break;
+          
       }
     });
     if(mounted){
